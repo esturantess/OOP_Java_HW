@@ -8,6 +8,7 @@ public class Coffee extends HotDrink{
         this.temperature = temperature;
     }
     public void setTemperature(int temperature) {
+
         this.temperature = temperature;
     }
 
