@@ -13,6 +13,7 @@ public class Human extends Actor{
 
     @Override
     public void setMakeOrder(boolean makeOrder) {
+
         super.isMakeOrder = makeOrder;
     }
 
@@ -23,11 +24,13 @@ public class Human extends Actor{
 
     @Override
     public boolean isMakeOrder() {
+
         return super.isMakeOrder;
     }
 
     @Override
     public boolean isTakeOrder() {
+
         return super.isTakeOrder;
     }
 }

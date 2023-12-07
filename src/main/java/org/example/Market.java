@@ -46,7 +46,7 @@ public class Market implements QueueBehaviour, MarketBehaviour{
     @Override
     public void giveOrders() {
         for(Actor actor: queue){
-            if(!actor.isMakeOrder){
+            if(actor.isMakeOrder){
                 actor.setTakeOrder(true);
                 System.out.println(actor.getName() + " получил заказ.");
             }
