@@ -15,13 +15,13 @@ public class StudentGroupService {
         return studentGroup;
     }
 
-    public List<Student> getSortedStudentGroup(){
+    public List<Student> getSortedStudentGroup() {
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
         Collections.sort(studentList);
         return studentList;
     }
 
-    public List<Student> getSortedStudentGroupByFIO(){
+    public List<Student> getSortedStudentGroupByFIO() {
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
         studentList.sort(new StudentComparator());
         return studentList;
