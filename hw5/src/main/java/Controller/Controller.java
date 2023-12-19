@@ -4,7 +4,9 @@ import Data.*;
 import Service.DataService;
 import Service.StudyGroupService;
 import View.StudentView;
+import View.StudyGroupView;
 
+import javax.swing.text.View;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,7 @@ public class Controller {
     private final DataService service = new DataService();
     private final StudyGroupService studyGroupService = new StudyGroupService();
     private final StudentView studentView = new StudentView();
-
+    private final StudyGroupView studyGroupView = new StudyGroupView();
     public void createStudent(String firstName, String secondName,
                               String lastName, String dateB) {
         service.create(firstName, secondName, lastName, dateB, Type.STUDENT);
@@ -36,5 +38,9 @@ public class Controller {
             studentList.add((Student) service.getUserById(Type.STUDENT, id));
         }
         studyGroupService.createStudyGroup(teacher, studentList);
+    }
+
+    public void printStudyGroup(StudyGroup studyGroup){
+        studyGroupView.printStudyGroup(studyGroup);
     }
 }
