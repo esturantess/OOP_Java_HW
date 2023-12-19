@@ -6,7 +6,6 @@ import Service.StudyGroupService;
 import View.StudentView;
 import View.StudyGroupView;
 
-import javax.swing.text.View;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +39,7 @@ public class Controller {
         studyGroupService.createStudyGroup(teacher, studentList);
     }
 
-    public void printStudyGroup(StudyGroup studyGroup){
-        studyGroupView.printStudyGroup(studyGroup);
+    public void printStudyGroup(){
+        studyGroupView.printStudyGroup(studyGroupService.getStudyGroup());
     }
 }
