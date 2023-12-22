@@ -2,7 +2,7 @@ package ru.gb.oseminar.data;
 
 import java.time.LocalDate;
 
-public class Student extends User implements Comparable<Student>{
+public class Student extends User{
     private Long studentId;
 
     public Student(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
@@ -31,10 +31,5 @@ public class Student extends User implements Comparable<Student>{
                ", patronymic='" + super.getPatronymic() + '\'' +
                ", dateOfBirth=" + super.getDateOfBirth() +
                '}';
-    }
-
-    @Override
-    public int compareTo(Student o) {
-        return this.studentId.compareTo(o.studentId);
     }
 }
